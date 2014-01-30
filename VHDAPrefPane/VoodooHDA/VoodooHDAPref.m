@@ -513,7 +513,7 @@ failure:
 {
 	bool res = false;
 	FILE *outputFile;
-	NSString *nPath = [[NSString stringWithString:@"~/Library/Preferences/VoodooHDA.settings"] stringByExpandingTildeInPath];
+	NSString *nPath = [@"~/Library/Preferences/VoodooHDA.settings" stringByExpandingTildeInPath];
 	const char *path = [nPath UTF8String];
 	outputFile = fopen(path, "wb+");
 	if(!outputFile) {
